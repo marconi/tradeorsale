@@ -1,0 +1,67 @@
+.image_replace(@width, @height) {
+    text-indent: -99999px;
+    display: inline-block;
+    width: @width;
+    height: @height;
+}
+
+.vertical_gradient(@topcolor, @bottomcolor) {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@topcolor', endColorstr='@bottomcolor');
+    background-image: -o-linear-gradient(-90deg, @topcolor 0%, @bottomcolor 100%);
+    background-image: -moz-linear-gradient(-90deg, @topcolor 0%, @bottomcolor 100%);
+    background-image: -webkit-linear-gradient(-90deg, @topcolor 0%, @bottomcolor 100%);
+    background-image: -ms-linear-gradient(-90deg, @topcolor 0%, @bottomcolor 100%);
+    background-image: linear-gradient(-90deg, @topcolor 0%, @bottomcolor 100%);
+}
+
+.box_shadow(@hshadow, @vshadow, @spread, @opacity: 0.50) {
+    -moz-box-shadow: @hshadow @vshadow @spread rgba(0,0,0,@opacity);
+    -webkit-box-shadow: @hshadow @vshadow @spread rgba(0,0,0,@opacity);
+    box-shadow: @hshadow @vshadow @spread rgba(0,0,0,@opacity);
+}
+
+.box_shadow_inset(@hshadow, @vshadow, @spread, @color) {
+    -moz-box-shadow: inset @hshadow @vshadow @spread @color;
+    -webkit-box-shadow: inset @hshadow @vshadow @spread @color;
+    box-shadow: inset @hshadow @vshadow @spread @color;
+}
+
+.no_box_shadow() {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.border_radius(@topleft, @topright, @bottomright, @bottomleft) {
+    -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+    -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+    border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
+.no_border_radius() {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.no_transition() {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
+
+.filter(@percent: 100%) {
+    -webkit-filter: grayscale(@percent);
+    -moz-filter: grayscale(@percent);
+    filter: grayscale(@percent);
+}
+
+.column(@count, @gap) {
+    -moz-column-count: @count;
+    -moz-column-gap: @gap;
+    -webkit-column-count: @count;
+    -webkit-column-gap: @gap;
+    column-count: @count;
+    column-gap: @gap;
+}

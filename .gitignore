@@ -1,0 +1,19 @@
+# standard
+*~
+*.pyc
+*.pyo
+*.mo
+*.log
+*.pid
+*.egg-info
+.coverage
+.DS_Store
+
+# local
+/local.cfg
+/local.ini
+
+*.db
+*.rdb
+
+tradeorsale/static/images/img*.jpg
